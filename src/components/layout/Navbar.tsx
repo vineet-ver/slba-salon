@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 
 export default function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -22,8 +23,8 @@ export default function Navbar() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut" }}
             className={`fixed top-0 left-0 w-full z-40 transition-all duration-500 ${isScrolled
-                    ? "bg-black-matte/80 backdrop-blur-md border-b border-gold/10 py-4"
-                    : "bg-transparent py-6"
+                ? "bg-black-matte/80 backdrop-blur-md border-b border-gold/10 py-4"
+                : "bg-transparent py-6"
                 }`}
         >
             <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
@@ -59,13 +60,68 @@ export default function Navbar() {
                     </Link>
                 </div>
 
-                {/* Mobile Menu Button - simplified for layout setup */}
-                <button className="md:hidden text-ivory p-2 focus:outline-none">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M4 6h16M4 12h16m-7 6h7" />
-                    </svg>
+                {/* Mobile Menu Button  */}
+                <button
+                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                    className="md:hidden text-ivory p-2 focus:outline-none z-50 relative"
+                >
+                    <div className="w-6 h-5 flex flex-col justify-between items-end">
+                        <span className={`h-[1px] bg-ivory transition-all duration-300 ${isMobileMenuOpen ? 'w-6 rotate-45 translate-y-[10px]' : 'w-6'}`}></span>
+                        <span className={`h-[1px] bg-ivory transition-all duration-300 ${isMobileMenuOpen ? 'opacity-0' : 'w-4'}`}></span>
+                        <span className={`h-[1px] bg-ivory transition-all duration-300 ${isMobileMenuOpen ? 'w-6 -rotate-45 -translate-y-[10px]' : 'w-5'}`}></span>
+                    </div>
                 </button>
             </div>
+
+            {/* Mobile Menu Overlay */}
+            <motion.div
+                initial={false}
+                animate={isMobileMenuOpen ? "open" : "closed"}
+                variants={{
+                    open: { x: 0, opacity: 1 },
+                    closed: { x: "100%", opacity: 0 }
+                }}
+                transition={{ duration: 0.5, ease: [0.76, 0, 0.24, 1] }}
+                className="fixed inset-0 bg-black-matte z-40 md:hidden flex flex-col items-center justify-center"
+            >
+                <div className="absolute inset-0 bg-[url('/noise.png')] opacity-20 mix-blend-overlay pointer-events-none" />
+
+                <nav className="flex flex-col items-center space-y-8 relative z-10">
+                    {["Services", "Portfolio", "Experience", "Team"].map((item, i) => (
+                        <motion.div
+                            key={item}
+                            variants={{
+                                open: { opacity: 1, y: 0, transition: { delay: 0.2 + i * 0.1 } },
+                                closed: { opacity: 0, y: 20 }
+                            }}
+                        >
+                            <Link
+                                href={`#${item.toLowerCase()}`}
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="text-3xl font-serif text-ivory hover:text-gold transition-colors duration-300"
+                            >
+                                {item}
+                            </Link>
+                        </motion.div>
+                    ))}
+
+                    <motion.div
+                        variants={{
+                            open: { opacity: 1, y: 0, transition: { delay: 0.6 } },
+                            closed: { opacity: 0, y: 20 }
+                        }}
+                        className="mt-8 pt-8 border-t border-gold/20 w-full text-center"
+                    >
+                        <Link
+                            href="#booking"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                            className="inline-block px-8 py-4 bg-gold text-black-matte text-xs tracking-widest uppercase font-medium hover:bg-ivory transition-colors duration-300"
+                        >
+                            Book Appointment
+                        </Link>
+                    </motion.div>
+                </nav>
+            </motion.div>
         </motion.header>
     );
 }

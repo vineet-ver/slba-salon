@@ -36,8 +36,8 @@ export default function BookingSection() {
                         {steps.map((step, i) => (
                             <div key={i} className="flex flex-col items-center">
                                 <div className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-serif transition-colors duration-500 bg-black-matte border ${currentStep > i + 1 ? "border-gold text-gold" :
-                                        currentStep === i + 1 ? "border-gold bg-gold text-black-matte" :
-                                            "border-gold/30 text-gold/30"
+                                    currentStep === i + 1 ? "border-gold bg-gold text-black-matte" :
+                                        "border-gold/30 text-gold/30"
                                     }`}>
                                     {currentStep > i + 1 ? <Check size={16} /> : i + 1}
                                 </div>
@@ -63,8 +63,8 @@ export default function BookingSection() {
                                             key={srv}
                                             onClick={() => setSelectedService(srv)}
                                             className={`p-6 border text-left transition-all duration-300 ${selectedService === srv
-                                                    ? "border-gold bg-gold/5"
-                                                    : "border-gold/10 hover:border-gold/50 bg-transparent"
+                                                ? "border-gold bg-gold/5"
+                                                : "border-gold/10 hover:border-gold/50 bg-transparent"
                                                 }`}
                                         >
                                             <h4 className="text-ivory font-serif text-lg mb-1">{srv}</h4>
@@ -129,7 +129,7 @@ export default function BookingSection() {
                                     exit={{ opacity: 0, x: -20 }}
                                     className="space-y-6 max-w-xl mx-auto"
                                 >
-                                    <div className="grid grid-cols-2 gap-6">
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                         <div>
                                             <label className="text-[10px] uppercase tracking-widest text-gold mb-2 block">First Name</label>
                                             <input type="text" className="w-full bg-transparent border-b border-gold/30 text-ivory py-2 focus:outline-none focus:border-gold" />

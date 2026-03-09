@@ -62,19 +62,19 @@ export default function Packages() {
                             viewport={{ once: true, margin: "-100px" }}
                             transition={{ duration: 0.8, delay: i * 0.2 }}
                             className={`relative bg-black-matte p-8 md:p-10 border transition-all duration-500 overflow-hidden group ${pkg.popular
-                                    ? "border-gold md:-translate-y-4 box-glow"
-                                    : "border-gold/10 hover:border-gold/40"
+                                ? "border-gold md:-translate-y-4 box-glow"
+                                : "border-gold/10 hover:border-gold/40"
                                 }`}
                         >
                             {pkg.popular && (
-                                <div className="absolute top-0 right-0 bg-gold text-black-matte text-[10px] uppercase tracking-widest px-4 py-1 font-bold">
+                                <div className="absolute top-0 right-0 bg-gold text-black-matte text-[10px] uppercase tracking-widest px-4 py-1 font-bold z-10">
                                     Highly Requested
                                 </div>
                             )}
 
-                            <h4 className="text-2xl font-serif text-ivory mb-2">{pkg.name}</h4>
-                            <p className="text-gold text-xl font-medium mb-6">{pkg.price}</p>
-                            <p className="text-ivory/60 text-sm font-light mb-8 leading-relaxed h-16">{pkg.desc}</p>
+                            <h4 className="text-xl md:text-2xl font-serif text-ivory mb-2 mt-4 md:mt-0">{pkg.name}</h4>
+                            <p className="text-gold text-lg md:text-xl font-medium mb-6">{pkg.price}</p>
+                            <p className="text-ivory/60 text-xs md:text-sm font-light mb-8 leading-relaxed md:h-16">{pkg.desc}</p>
 
                             <ul className="mb-10 space-y-4">
                                 {pkg.features.map((feature, idx) => (
@@ -87,8 +87,8 @@ export default function Packages() {
 
                             <button
                                 className={`w-full py-4 text-xs tracking-[0.2em] uppercase transition-colors duration-300 ${pkg.popular
-                                        ? "bg-gold text-black-matte hover:bg-ivory"
-                                        : "border border-gold text-gold hover:bg-gold hover:text-black-matte"
+                                    ? "bg-gold text-black-matte hover:bg-ivory"
+                                    : "border border-gold text-gold hover:bg-gold hover:text-black-matte"
                                     }`}
                             >
                                 Inquire Now

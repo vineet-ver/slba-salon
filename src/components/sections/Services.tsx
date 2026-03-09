@@ -47,12 +47,12 @@ export default function Services() {
                     <h3 className="text-4xl md:text-5xl font-serif text-ivory">Curated <span className="italic text-gold">Experiences</span></h3>
                 </div>
 
-                <div className="flex justify-center space-x-8 md:space-x-16 mb-16 border-b border-gold/20 overflow-x-auto no-scrollbar">
+                <div className="flex justify-start md:justify-center overflow-x-auto no-scrollbar space-x-6 md:space-x-16 mb-12 border-b border-gold/20 pb-1">
                     {serviceCategories.map((cat) => (
                         <button
                             key={cat.id}
                             onClick={() => setActiveCategory(cat.id)}
-                            className={`pb-4 text-xs md:text-sm uppercase tracking-[0.2em] transition-all duration-300 relative whitespace-nowrap ${activeCategory === cat.id ? "text-gold font-medium" : "text-ivory/50 hover:text-ivory"
+                            className={`pb-4 text-xs md:text-sm uppercase tracking-[0.2em] transition-all duration-300 relative whitespace-nowrap shrink-0 ${activeCategory === cat.id ? "text-gold font-medium" : "text-ivory/50 hover:text-ivory"
                                 }`}
                         >
                             {cat.name}

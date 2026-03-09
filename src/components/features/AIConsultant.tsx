@@ -23,7 +23,7 @@ export default function AIConsultant() {
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 50, scale: 0.9 }}
                         transition={{ type: "spring", damping: 25, stiffness: 200 }}
-                        className="fixed bottom-24 right-8 z-50 w-[350px] bg-black-matte border border-gold/30 shadow-2xl overflow-hidden flex flex-col"
+                        className="fixed bottom-24 right-4 md:right-8 z-50 w-[calc(100vw-2rem)] md:w-[350px] bg-black-matte border border-gold/30 shadow-2xl overflow-hidden flex flex-col"
                     >
                         {/* Header */}
                         <div className="bg-gold/10 border-b border-gold/20 p-4 flex justify-between items-center">

@@ -51,11 +51,11 @@ export default function Experience() {
                         viewport={{ once: true, margin: "-100px" }}
                         transition={{ duration: 1 }}
                     >
-                        <h2 className="text-gold uppercase tracking-[0.3em] text-xs font-semibold mb-6">The Legacy</h2>
-                        <h3 className="text-4xl md:text-5xl lg:text-6xl font-serif text-black-matte leading-tight mb-8">
+                        <h2 className="text-gold uppercase tracking-[0.3em] text-[10px] md:text-xs font-semibold mb-6">The Legacy</h2>
+                        <h3 className="text-3xl md:text-5xl lg:text-6xl font-serif text-black-matte leading-tight mb-8">
                             A Decade of <br /> <span className="italic text-gold">Masterclass</span> Beauty
                         </h3>
-                        <p className="text-black-matte/70 font-sans font-light text-base leading-relaxed mb-8 max-w-lg">
+                        <p className="text-black-matte/70 font-sans font-light text-sm md:text-base leading-relaxed mb-8 max-w-lg pr-4 md:pr-0">
                             Our flagship studio represents the pinnacle of bridal styling. We utilize only the world’s most exclusive cosmetics—Tom Ford, Charlotte Tilbury, Dior, and Chanel—to ensure a radiant, long-lasting finish that completely redefines luxury.
                         </p>
                         <img
