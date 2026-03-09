@@ -59,7 +59,7 @@ export default function Experience() {
                             Our flagship studio represents the pinnacle of bridal styling. We utilize only the world’s most exclusive cosmetics—Tom Ford, Charlotte Tilbury, Dior, and Chanel—to ensure a radiant, long-lasting finish that completely redefines luxury.
                         </p>
                         <img
-                            src="https://images.unsplash.com/photo-1596704017254-8c886616fc68?q=80&w=1000&auto=format&fit=crop"
+                            src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000&auto=format&fit=crop"
                             alt="Luxury Cosmetics"
                             className="w-full h-48 object-cover grayscale opacity-80"
                         />

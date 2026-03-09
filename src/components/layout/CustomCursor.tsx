@@ -5,61 +5,111 @@ import { motion } from "framer-motion";
 
 export default function CustomCursor({ children }: { children: React.ReactNode }) {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-    const [isHovered, setIsHovered] = useState(false);
+    const [isHovering, setIsHovering] = useState(false);
+    const [hidden, setHidden] = useState(true);
 
     useEffect(() => {
         const updateMousePosition = (e: MouseEvent) => {
             setMousePosition({ x: e.clientX, y: e.clientY });
+            if (hidden) setHidden(false);
         };
 
-        const handleMouseOver = (e: MouseEvent) => {
-            const target = e.target as HTMLElement;
-            if (
-                target.tagName === "A" ||
-                target.tagName === "BUTTON" ||
-                target.closest("a") ||
-                target.closest("button")
-            ) {
-                setIsHovered(true);
-            } else {
-                setIsHovered(false);
-            }
-        };
+        const handleMouseEnter = () => setIsHovering(true);
+        const handleMouseLeave = () => setIsHovering(false);
+
+        // Hide cursor when it leaves the window
+        const handleDocumentMouseLeave = () => setHidden(true);
 
         window.addEventListener("mousemove", updateMousePosition);
-        window.addEventListener("mouseover", handleMouseOver);
+        document.addEventListener("mouseleave", handleDocumentMouseLeave);
+        document.addEventListener("mouseenter", () => setHidden(false));
+
+        // Attach hover listeners to specific elements for the "enlarged" cursor effect
+        const interactiveSelectors = 'a, button, input, textarea, select, [role="button"], .cursor-pointer';
+        document.querySelectorAll(interactiveSelectors).forEach((el) => {
+            el.addEventListener("mouseenter", handleMouseEnter);
+            el.addEventListener("mouseleave", handleMouseLeave);
+        });
+
+        // MutationObserver to attach listeners to newly added elements (e.g., in a SPA)
+        const observer = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+                if (mutation.type === "childList") {
+                    document.querySelectorAll(interactiveSelectors).forEach((el) => {
+                        // Avoid adding duplicate listeners
+                        el.removeEventListener("mouseenter", handleMouseEnter);
+                        el.removeEventListener("mouseleave", handleMouseLeave);
+                        el.addEventListener("mouseenter", handleMouseEnter);
+                        el.addEventListener("mouseleave", handleMouseLeave);
+                    });
+                }
+            });
+        });
+
+        observer.observe(document.body, { childList: true, subtree: true });
 
         return () => {
             window.removeEventListener("mousemove", updateMousePosition);
-            window.removeEventListener("mouseover", handleMouseOver);
+            document.removeEventListener("mouseleave", handleDocumentMouseLeave);
+            document.removeEventListener("mouseenter", () => setHidden(false));
+            document.querySelectorAll(interactiveSelectors).forEach((el) => {
+                el.removeEventListener("mouseenter", handleMouseEnter);
+                el.removeEventListener("mouseleave", handleMouseLeave);
+            });
+            observer.disconnect();
         };
-    }, []);
+    }, [hidden]);
 
-    const variants = {
-        default: {
-            x: mousePosition.x - 16,
-            y: mousePosition.y - 16,
-        },
-        hover: {
-            x: mousePosition.x - 40,
-            y: mousePosition.y - 40,
-            scale: 1.5,
-            backgroundColor: "rgba(212, 175, 55, 0.1)", // Gold with low opacity
-            border: "1px solid rgba(212, 175, 55, 0.5)",
-        },
-    };
+    // Mobile check to completely disable custom cursor on touch devices to improve performance
+    const isMobile = typeof window !== 'undefined' && window.matchMedia("(pointer: coarse)").matches;
 
     return (
         <>
             {children}
-            <motion.div
-                className="fixed top-0 left-0 w-8 h-8 rounded-full border border-gold/50 pointer-events-none z-50 mix-blend-difference hidden md:block" // Hidden on touch devices
-                variants={variants}
-                animate={isHovered ? "hover" : "default"}
-                transition={{ type: "tween", ease: "backOut", duration: 0.15 }}
-            >
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1 h-1 bg-gold rounded-full" />
-            </motion.div>
+            {!isMobile && (
+                <>
+                    {/* The main core dot */}
+                    <motion.div
+                        className="fixed top-0 left-0 w-2 h-2 bg-gold rounded-full pointer-events-none z-[9999] mix-blend-exclusion"
+                        animate={{
+                            x: mousePosition.x - 4,
+                            y: mousePosition.y - 4,
+                            scale: isHovering ? 0 : 1,
+                            opacity: hidden ? 0 : 1
+                        }}
+                        transition={{
+                            type: "tween",
+                            ease: "backOut",
+                            duration: 0.1
+                        }}
+                    />
+                    {/* The outer following ring */}
+                    <motion.div
+                        className="fixed top-0 left-0 w-8 h-8 border border-gold/50 rounded-full pointer-events-none z-[9998] mix-blend-exclusion flex items-center justify-center"
+                        animate={{
+                            x: mousePosition.x - 16,
+                            y: mousePosition.y - 16,
+                            scale: isHovering ? 1.5 : 1,
+                            opacity: hidden ? 0 : 1,
+                            backgroundColor: isHovering ? "rgba(212,175,55,0.1)" : "transparent"
+                        }}
+                        transition={{
+                            type: "tween",
+                            ease: "backOut",
+                            duration: 0.2
+                        }}
+                    >
+                        {/* Optional inner content when hovering */}
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: isHovering ? 1 : 0 }}
+                            className="text-[6px] uppercase tracking-widest text-gold mt-[1px]"
+                        >
+                            Expand
+                        </motion.div>
+                    </motion.div>
+                </>
+            )}
         </>
     );
 }

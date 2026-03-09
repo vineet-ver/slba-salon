@@ -8,7 +8,7 @@ import Gallery from "@/components/sections/Gallery";
 import Packages from "@/components/sections/Packages";
 import Testimonials from "@/components/sections/Testimonials";
 import Instagram from "@/components/sections/Instagram";
-import Interior from "@/components/sections/Interior";
+import VirtualSalon from "@/components/sections/VirtualSalon";
 import BookingSection from "@/components/sections/BookingSection";
 import Contact from "@/components/sections/Contact";
 
@@ -25,7 +25,7 @@ export default function Home() {
       <Packages />
       <Testimonials />
       <Instagram />
-      <Interior />
+      <VirtualSalon />
       <BookingSection />
       <Contact />
     </>

@@ -9,7 +9,7 @@ const teamMembers = [
         name: "Elena Rostova",
         role: "Lead Bridal Director",
         exp: "15+ Years",
-        image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1000&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1595476108010-b4d1f10d5e42?q=80&w=1000&auto=format&fit=crop"
     },
     {
         name: "Marcus Sterling",

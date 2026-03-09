@@ -8,6 +8,7 @@ import CustomCursor from "@/components/layout/CustomCursor";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import AIConsultant from "@/components/features/AIConsultant";
+import FloatingMobileBooking from "@/components/ui/FloatingMobileBooking";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -43,6 +44,7 @@ export default function RootLayout({
               {children}
             </main>
             <Footer />
+            <FloatingMobileBooking />
             <AIConsultant />
           </CustomCursor>
         </SmoothScroll>
