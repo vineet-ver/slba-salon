@@ -8,27 +8,27 @@ const serviceCategories = [
         id: "makeup",
         name: "Makeup Studio",
         services: [
-            { name: "Signature Bridal", price: "Starting at ₹25,000", desc: "Flawless HD/Airbrush makeup with luxury international products.", image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&auto=format&fit=crop" },
-            { name: "Engagement & Reception", price: "Starting at ₹15,000", desc: "Elegant styling tailored to your pre-wedding events.", image: "https://images.unsplash.com/photo-1516975080661-464971c50bf3?q=80&w=600&auto=format&fit=crop" },
-            { name: "Party Glamour", price: "Starting at ₹8,000", desc: "Sophisticated editorial looks for special occasions.", image: "https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?q=80&w=600&auto=format&fit=crop" },
+            { name: "Party Makeup", price: "Custom Quote", desc: "Sophisticated styling for your special events and parties.", image: "https://images.unsplash.com/photo-1546804784-816ea73ec1fa?q=80&w=600&auto=format&fit=crop" },
+            { name: "Reception Makeup", price: "Custom Quote", desc: "Elegant and flawless makeup designed for evening light.", image: "https://images.unsplash.com/photo-1516975080661-464971c50bf3?q=80&w=600&auto=format&fit=crop" },
+            { name: "Mehandi & Bridal Stylists", price: "Custom Quote", desc: "Complete bridal and mehndi beauty solutions.", image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&auto=format&fit=crop" },
         ]
     },
     {
         id: "hair",
-        name: "Hair Studio",
+        name: "Hair & Care",
         services: [
-            { name: "Luxury Styling & Updos", price: "Starting at ₹5,000", desc: "Intricate structural styling and classic Hollywood waves.", image: "https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=600&auto=format&fit=crop" },
-            { name: "Advanced Color Mapping", price: "Starting at ₹8,000", desc: "Balayage, babylights, and bespoke color formulation.", image: "https://images.unsplash.com/photo-1595476108010-b4d1f10d5e42?q=80&w=600&auto=format&fit=crop" },
-            { name: "Caviar Hair Spa", price: "Starting at ₹4,000", desc: "Deep restorative treatment utilizing premium marine extracts.", image: "https://images.unsplash.com/photo-1519699047748-de8e457a634e?q=80&w=600&auto=format&fit=crop" },
+            { name: "Expert Hair Cutting", price: "Consultation Required", desc: "Precision basic cutting and trimming.", image: "https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=600&auto=format&fit=crop" },
+            { name: "Signature V & U Cuts", price: "Consultation Required", desc: "Specialty v-cuts, u-cuts, and advanced structural styling.", image: "https://images.unsplash.com/photo-1595476108010-b4d1f10d5e42?q=80&w=600&auto=format&fit=crop" },
+            { name: "Hairstyling Services", price: "Consultation Required", desc: "Classic updos, hollywood waves, and custom occasion styling.", image: "https://images.unsplash.com/photo-1519699047748-de8e457a634e?q=80&w=600&auto=format&fit=crop" },
         ]
     },
     {
         id: "skin",
-        name: "Skin Academy",
+        name: "Skin Clinic",
         services: [
-            { name: "Glass Skin Hydrafacial", price: "Starting at ₹12,000", desc: "Medical-grade resurfacing for an illuminated, poreless finish.", image: "https://images.unsplash.com/photo-1542385151-efd9000785a0?q=80&w=600&auto=format&fit=crop" },
-            { name: "24K Gold Therapy", price: "Starting at ₹15,000", desc: "Anti-aging infusion utilizing pure 24K gold nano-particles.", image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=600&auto=format&fit=crop" },
-            { name: "Bridal Skin Prep Program", price: "Custom Package", desc: "A 3-month comprehensive dermatology and aesthetic journey.", image: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=600&auto=format&fit=crop" },
+            { name: "Waxing & Threading", price: "Consultation Required", desc: "Flawless hair removal, threading, and skin conditioning.", image: "https://images.unsplash.com/photo-1542385151-efd9000785a0?q=80&w=600&auto=format&fit=crop" },
+            { name: "Skin & Beauty Therapy", price: "Custom Package", desc: "Advanced skincare routines curated for all skin types.", image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=600&auto=format&fit=crop" },
+            { name: "At-Home Services", price: "Custom Quote", desc: "Experience SLBA's premium salon services from the comfort of your home.", image: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=600&auto=format&fit=crop" },
         ]
     }
 ];

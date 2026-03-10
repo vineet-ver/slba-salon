@@ -8,20 +8,20 @@ const testimonials = [
     {
         name: "Victoria Beckham",
         event: "Met Gala 2025",
-        image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop",
-        text: "The sheer professionalism and artistry at Aura is unmatched. They understood exactly what I needed for the red carpet. Completely flawless execution that lasted beautifully through the entire night."
+        image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=200&auto=format&fit=crop",
+        text: "The sheer professionalism and artistry by Saroj is unmatched. She understood exactly what I needed for the red carpet. Completely flawless execution that lasted beautifully through the entire night."
     },
     {
         name: "Sophia Kensington",
         event: "Destination Wedding in Lake Como",
         image: "https://images.unsplash.com/photo-1519699047748-de8e457a634e?q=80&w=200&auto=format&fit=crop",
-        text: "I flew the Aura team to Italy for my wedding, and it was the best decision I made. The level of luxury, calm energy, and absolute perfection in their styling made me feel like royalty."
+        text: "I flew the SLBA team to Italy for my wedding, and it was the best decision I made. The level of luxury, calm energy, and absolute perfection in their styling made me feel like royalty."
     },
     {
         name: "Amara Singh",
         event: "Royal Heritage Wedding",
         image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=200&auto=format&fit=crop",
-        text: "Incorporating traditional heavy jewelry with a modern luxury makeup look was challenging, but Aura delivered beyond expectations. The skin looked like glass, and the eye work was simply mesmerizing."
+        text: "Incorporating traditional heavy jewelry with a modern luxury makeup look was challenging, but SLBA delivered beyond expectations. The skin looked like glass, and the eye work was simply mesmerizing."
     }
 ];
 

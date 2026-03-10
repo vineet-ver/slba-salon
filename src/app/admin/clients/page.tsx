@@ -9,7 +9,7 @@ export default function AdminClientsPage() {
         { id: "CL-902", name: "Sophia Chen", tier: "Platinum Icon", spent: "₹12.2L", visits: 22, lastVisit: "Oct 22, 2024", risk: "Low" },
         { id: "CL-903", name: "Isabella V.", tier: "Silver Status", spent: "₹2.1L", visits: 4, lastVisit: "Sep 10, 2024", risk: "Medium" },
         { id: "CL-904", name: "Olivia P.", tier: "Gold Muse", spent: "₹6.8L", visits: 11, lastVisit: "Oct 01, 2024", risk: "Low" },
-        { id: "CL-905", name: "Mia Wong", tier: "Aura Starter", spent: "₹45K", visits: 1, lastVisit: "Aug 20, 2024", risk: "High" },
+        { id: "CL-905", name: "Mia Wong", tier: "SLBA Starter", spent: "₹45K", visits: 1, lastVisit: "Aug 20, 2024", risk: "High" },
     ];
 
     return (
@@ -39,7 +39,7 @@ export default function AdminClientsPage() {
                         <thead className="bg-black-matte/50 text-[10px] uppercase tracking-widest text-gold/80 border-b border-gold/10">
                             <tr>
                                 <th className="px-6 py-4 font-normal">Client Name</th>
-                                <th className="px-6 py-4 font-normal">Aura Tier</th>
+                                <th className="px-6 py-4 font-normal">SLBA Tier</th>
                                 <th className="px-6 py-4 font-normal">LTV (Lifetime Value)</th>
                                 <th className="px-6 py-4 font-normal">Total Visits</th>
                                 <th className="px-6 py-4 font-normal">Last Aesthetic Visit</th>
@@ -64,8 +64,8 @@ export default function AdminClientsPage() {
                                     </td>
                                     <td className="px-6 py-4">
                                         <span className={`flex items-center gap-1.5 text-xs ${client.tier.includes('Platinum') ? "text-stone-300" :
-                                                client.tier.includes('Gold') ? "text-gold" :
-                                                    "text-zinc-400"
+                                            client.tier.includes('Gold') ? "text-gold" :
+                                                "text-zinc-400"
                                             }`}>
                                             <Star size={12} className={client.tier.includes('Gold') || client.tier.includes('Platinum') ? "fill-current" : ""} /> {client.tier}
                                         </span>
@@ -75,8 +75,8 @@ export default function AdminClientsPage() {
                                     <td className="px-6 py-4">{client.lastVisit}</td>
                                     <td className="px-6 py-4">
                                         <span className={`text-[10px] uppercase tracking-widest px-2 py-1 flex items-center gap-1 w-max rounded-full ${client.risk === "Low" ? "text-emerald-400 bg-emerald-500/10 border border-emerald-500/20" :
-                                                client.risk === "Medium" ? "text-yellow-400 bg-yellow-500/10 border border-yellow-500/20" :
-                                                    "text-red-400 bg-red-500/10 border border-red-500/20"
+                                            client.risk === "Medium" ? "text-yellow-400 bg-yellow-500/10 border border-yellow-500/20" :
+                                                "text-red-400 bg-red-500/10 border border-red-500/20"
                                             }`}>
                                             {client.risk === "High" && <ShieldAlert size={10} />} {client.risk}
                                         </span>

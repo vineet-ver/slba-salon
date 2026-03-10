@@ -70,7 +70,7 @@ export default function Story() {
                 className="absolute top-[10%] left-[5%] md:left-[10%] w-[40vw] md:w-[25vw] aspect-[3/4] z-0 overflow-hidden opacity-40 mix-blend-lighten"
             >
                 <img
-                    src="https://images.unsplash.com/photo-1542385151-efd9000785a0?q=80&w=1000&auto=format&fit=crop"
+                    src="/Ethereal-Glow.jfif"
                     alt="Editorial Detail"
                     className="w-full h-full object-cover grayscale brightness-75 contrast-125"
                 />
@@ -81,7 +81,7 @@ export default function Story() {
                 className="absolute bottom-[20%] right-[5%] md:right-[15%] w-[35vw] md:w-[20vw] aspect-square z-0 overflow-hidden opacity-30 mix-blend-lighten"
             >
                 <img
-                    src="https://images.unsplash.com/photo-1516975080661-464971c50bf3?q=80&w=1000&auto=format&fit=crop"
+                    src="/Modern-Muse.jfif"
                     alt="Editorial Texture"
                     className="w-full h-full object-cover grayscale brightness-75 sepia-[.2]"
                 />

@@ -21,7 +21,7 @@ export default function Interior() {
                 className="absolute inset-0 w-full h-full"
             >
                 <img
-                    src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=2000&auto=format&fit=crop"
+                    src="/Ethereal-Glow.jfif"
                     alt="Luxury Salon Interior"
                     className="w-full h-full object-cover grayscale-[20%]"
                 />

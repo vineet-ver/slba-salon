@@ -1,14 +1,14 @@
 import { ReactNode } from "react";
 import Link from "next/link";
-import { User, Calendar, History, Settings, LogOut, ChevronRight, Award } from "lucide-react";
+import { User, Calendar, History, Settings, LogOut, ChevronRight, Award, Clock } from "lucide-react";
 
 export default function DashboardLayout({ children }: { children: ReactNode }) {
     const sidebarItems = [
         { icon: <User size={18} />, label: "Profile", href: "/dashboard" },
         { icon: <Calendar size={18} />, label: "Appointments", href: "/dashboard/appointments" },
-        { icon: <History size={18} />, label: "Aesthetic History", href: "/dashboard/history" },
-        { icon: <Award size={18} />, label: "Aura Benefits", href: "/dashboard/benefits" },
-        { icon: <Settings size={18} />, label: "Settings", href: "/dashboard/settings" },
+        { icon: <Clock size={18} />, label: "History", href: "/dashboard/history" },
+        { icon: <Award size={18} />, label: "SLBA Benefits", href: "/dashboard/benefits" },
+        { icon: <Settings size={18} />, label: "Preferences", href: "/dashboard/settings" },
     ];
 
     return (
@@ -44,8 +44,8 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
                                     key={idx}
                                     href={item.href}
                                     className={`flex items-center justify-between p-4 border text-sm transition-all duration-300 ${idx === 0
-                                            ? "border-gold bg-gold/5 text-gold shadow-[0_0_15px_rgba(212,175,55,0.1)]"
-                                            : "border-transparent text-ivory/60 hover:text-ivory hover:border-gold/30 hover:bg-white/5"
+                                        ? "border-gold bg-gold/5 text-gold shadow-[0_0_15px_rgba(212,175,55,0.1)]"
+                                        : "border-transparent text-ivory/60 hover:text-ivory hover:border-gold/30 hover:bg-white/5"
                                         }`}
                                 >
                                     <div className="flex items-center gap-4">

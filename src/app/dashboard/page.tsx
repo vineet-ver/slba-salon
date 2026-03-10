@@ -76,7 +76,7 @@ export default function DashboardOverview() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2 }}
                 >
-                    <h3 className="text-lg font-serif text-ivory mb-6">Aura Benefits Status</h3>
+                    <h3 className="text-lg font-serif text-ivory mb-6">SLBA Benefits Status</h3>
 
                     <div className="border border-gold/10 p-6 bg-gradient-to-br from-gold/5 to-transparent h-full">
                         <div className="flex justify-between items-end mb-8">
@@ -86,7 +86,7 @@ export default function DashboardOverview() {
                             </div>
                             <div className="text-right">
                                 <p className="text-2xl font-serif text-ivory">4,250</p>
-                                <p className="text-[10px] uppercase tracking-widest text-ivory/50 mt-1">Aura Points</p>
+                                <p className="text-[10px] uppercase tracking-widest text-ivory/50 mt-1">SLBA Points</p>
                             </div>
                         </div>
 

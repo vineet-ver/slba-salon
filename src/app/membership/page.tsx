@@ -7,7 +7,7 @@ export default function MembershipPlaceholder() {
                 <div className="w-20 h-20 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-8 outline outline-offset-4 outline-1 outline-gold/20">
                     <Gem size={32} className="text-gold" />
                 </div>
-                <h1 className="text-4xl md:text-5xl font-serif mb-6">Aura <span className="italic text-gold">Society</span></h1>
+                <h1 className="text-4xl md:text-5xl font-serif mb-6">SLBA <span className="italic text-gold">Society</span></h1>
                 <p className="text-ivory/60 max-w-lg mx-auto mb-10 leading-relaxed text-sm">
                     An invite-only membership for our most distinguished clientele. Includes priority bookings, complementary monthly touch-ups, and access to unreleased product lines.
                 </p>

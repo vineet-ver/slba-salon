@@ -7,12 +7,12 @@ import { X, SlidersHorizontal, ArrowLeftRight } from "lucide-react";
 const categories = ["All", "Bridal", "Editorial", "Glamour"];
 
 const galleryImages = [
-    { id: 1, category: "Bridal", afterSrc: "https://images.unsplash.com/photo-1542385151-efd9000785a0?q=80&w=1000&auto=format&fit=crop", beforeSrc: "https://images.unsplash.com/photo-1516975080661-464971c50bf3?q=80&w=1000&auto=format&fit=crop" },
-    { id: 2, category: "Editorial", afterSrc: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000&auto=format&fit=crop", beforeSrc: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=1000&auto=format&fit=crop" },
-    { id: 3, category: "Bridal", afterSrc: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=1000&auto=format&fit=crop", beforeSrc: "https://images.unsplash.com/photo-1542385151-efd9000785a0?q=80&w=1000&auto=format&fit=crop" },
-    { id: 4, category: "Glamour", afterSrc: "https://images.unsplash.com/photo-1546804784-816ea73ec1fa?q=80&w=1000&auto=format&fit=crop", beforeSrc: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1000&auto=format&fit=crop" },
-    { id: 5, category: "Editorial", afterSrc: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1000&auto=format&fit=crop", beforeSrc: "https://images.unsplash.com/photo-1546804784-816ea73ec1fa?q=80&w=1000&auto=format&fit=crop" },
-    { id: 6, category: "Glamour", afterSrc: "https://images.unsplash.com/photo-1516975080661-464971c50bf3?q=80&w=1000&auto=format&fit=crop", beforeSrc: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000&auto=format&fit=crop" },
+    { id: 1, category: "Bridal", afterSrc: "/Ethereal-Glow.jpg", beforeSrc: "/Ethereal-Glow.jpg" },
+    { id: 2, category: "Editorial", afterSrc: "thai-glam-makeup.jfif", beforeSrc: "/thai-glam-makeup.jfif" },
+    { id: 3, category: "Bridal", afterSrc: "/bridal.jfif", beforeSrc: "/bridal.jfif" },
+    { id: 4, category: "Glamour", afterSrc: "/farshi.jfif", beforeSrc: "/farshi.jfif" },
+    { id: 5, category: "Editorial", afterSrc: "/pretty-brides.jfif", beforeSrc: "/pretty-brides.jfif" },
+    { id: 6, category: "Glamour", afterSrc: "/bridal2.jfif", beforeSrc: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000&auto=format&fit=crop" },
 ];
 
 export default function Gallery() {
@@ -94,12 +94,18 @@ export default function Gallery() {
             {/* Interactive Before/After Lightbox */}
             <AnimatePresence>
                 {selectedImage && (
-                    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black-matte/95 backdrop-blur-md p-4 md:p-12">
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        className="fixed inset-0 z-[100] flex items-center justify-center bg-black-matte/95 backdrop-blur-md p-4 md:p-12"
+                        onClick={() => setSelectedImage(null)}
+                    >
                         <button
-                            className="absolute top-8 right-8 text-ivory/50 hover:text-ivory transition-colors z-50"
-                            onClick={() => setSelectedImage(null)}
+                            className="absolute top-6 right-6 md:top-10 md:right-10 w-12 h-12 bg-black-matte border border-gold/30 flex items-center justify-center rounded-full text-ivory hover:text-gold hover:border-gold transition-all duration-300 z-[200] cursor-pointer shadow-2xl"
+                            onClick={(e) => { e.stopPropagation(); setSelectedImage(null); }}
                         >
-                            <X size={32} strokeWidth={1} />
+                            <X size={20} strokeWidth={2} />
                         </button>
 
                         <motion.div
@@ -111,6 +117,7 @@ export default function Gallery() {
                             onMouseEnter={() => setIsHoveringLightbox(true)}
                             onMouseLeave={() => setIsHoveringLightbox(false)}
                             onMouseMove={handleMouseMove}
+                            onClick={(e) => e.stopPropagation()}
                             onTouchMove={(e) => {
                                 const rect = e.currentTarget.getBoundingClientRect();
                                 const x = Math.max(0, Math.min(e.touches[0].clientX - rect.left, rect.width));
@@ -149,7 +156,7 @@ export default function Gallery() {
                                 After
                             </div>
                         </motion.div>
-                    </div>
+                    </motion.div>
                 )}
             </AnimatePresence>
         </section>

@@ -25,8 +25,9 @@ export default function HistoryPage() {
 
     return (
         <div className="space-y-8">
+            <h1 className="text-3xl font-serif text-ivory">Aesthetic History</h1>
+            <p className="text-sm font-light text-ivory/60 mb-8">A curated archive of your past SLBA experiences.</p>
             <div className="flex justify-between items-end mb-6">
-                <h2 className="text-3xl font-serif text-ivory">Aesthetic History</h2>
                 <button className="text-[10px] uppercase tracking-widest text-gold/70 hover:text-gold transition-colors flex items-center gap-1.5">
                     <Download size={12} /> Export Records
                 </button>

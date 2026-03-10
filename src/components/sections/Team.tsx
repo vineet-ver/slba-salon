@@ -6,22 +6,25 @@ import { Instagram } from "lucide-react";
 
 const teamMembers = [
     {
-        name: "Elena Rostova",
-        role: "Lead Bridal Director",
-        exp: "15+ Years",
-        image: "https://images.unsplash.com/photo-1595476108010-b4d1f10d5e42?q=80&w=1000&auto=format&fit=crop"
+        name: "Sweety Sharma",
+        role: "Lead Bridal Director & Founder",
+        exp: "2+ Years",
+        image: "/sweety.png",
+        instagram: "https://www.instagram.com/sweetyysharma2192?igsh=bGtyaHNsNzV5dGJh"
     },
     {
-        name: "Marcus Sterling",
+        name: "Tannu sharma",
         role: "Senior Hair Architect",
-        exp: "12+ Years",
-        image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1000&auto=format&fit=crop"
+        exp: "3+ Years",
+        image: "tanu-sharma.jfif",
+        instagram: "#"
     },
     {
         name: "Isabella Chen",
         role: "Dermatology Aesthetics",
-        exp: "10+ Years",
-        image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000&auto=format&fit=crop"
+        exp: "9+ Years",
+        image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000&auto=format&fit=crop",
+        instagram: "#"
     }
 ];
 
@@ -65,9 +68,9 @@ function TeamCard({ member }: { member: typeof teamMembers[0] }) {
                         <h4 className="text-2xl font-serif text-ivory mb-1">{member.name}</h4>
                         <p className="text-ivory/50 text-xs tracking-wider">{member.exp} Experience</p>
                     </div>
-                    <button className="w-10 h-10 rounded-full border border-gold/30 flex items-center justify-center text-ivory hover:bg-gold hover:text-black-matte transition-all duration-300 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0">
+                    <a href={member.instagram} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-gold/30 flex items-center justify-center text-ivory hover:bg-gold hover:text-black-matte transition-all duration-300 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 cursor-pointer">
                         <Instagram size={18} strokeWidth={1.5} />
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>

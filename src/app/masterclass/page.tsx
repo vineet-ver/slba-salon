@@ -11,8 +11,8 @@ export default function MasterclassPlaceholder() {
                     <Video size={32} className="text-gold" />
                 </div>
                 <h1 className="text-4xl md:text-5xl font-serif mb-6">Master <span className="italic text-gold">The Craft</span></h1>
-                <p className="text-ivory/80 max-w-md mx-auto mb-10 leading-relaxed text-sm md:text-base">
-                    Exclusive bridal makeup masterclasses taught by Aura's lead artists. Learn the secrets behind the ₹5,00,000 look. Sign up for early access to the upcoming digital curriculum.
+                <p className="text-ivory/80 text-lg md:text-xl font-light mb-12 max-w-3xl leading-relaxed">
+                    Exclusive bridal makeup masterclasses taught by Saroj Sharma. Learn the secrets behind the luxury SLBA look. Sign up for early access to the upcoming digital curriculum.
                 </p>
                 <div className="flex justify-center gap-4">
                     <button className="px-8 py-3 bg-gold text-black-matte text-xs uppercase tracking-widest hover:bg-ivory transition-colors">

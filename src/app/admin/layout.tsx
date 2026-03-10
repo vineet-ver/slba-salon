@@ -15,9 +15,9 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
         <div className="min-h-screen bg-[#050505] flex text-ivory">
             {/* Sidebar */}
             <aside className="w-64 border-r border-gold/10 bg-black-matte flex flex-col hidden md:flex">
-                <div className="p-8 border-b border-gold/10">
-                    <Link href="/" className="font-serif text-2xl tracking-widest text-gold block text-center">AURA</Link>
-                    <p className="text-[9px] uppercase tracking-[0.3em] text-ivory/40 text-center mt-2">Admin Portal</p>
+                <div className="p-6 border-b border-gold/10">
+                    <Link href="/" className="font-serif text-2xl tracking-widest text-gold block text-center">SLBA</Link>
+                    <p className="text-[9px] uppercase tracking-widest text-center text-ivory/50 mt-2">Admin Portal</p>
                 </div>
 
                 <nav className="p-4 flex-1 space-y-2 mt-4">
@@ -26,8 +26,8 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
                             key={idx}
                             href={item.href}
                             className={`flex items-center gap-4 p-4 text-sm transition-all duration-300 rounded-lg ${idx === 0
-                                    ? "bg-gold/10 text-gold shadow-[inset_2px_0_0_rgba(212,175,55,1)]"
-                                    : "text-ivory/60 hover:text-ivory hover:bg-white/5"
+                                ? "bg-gold/10 text-gold shadow-[inset_2px_0_0_rgba(212,175,55,1)]"
+                                : "text-ivory/60 hover:text-ivory hover:bg-white/5"
                                 }`}
                         >
                             {item.icon}

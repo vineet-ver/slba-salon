@@ -29,10 +29,13 @@ export default function Navbar() {
         >
             <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
                 {/* Logo */}
-                <Link href="/" className="group">
-                    <h1 className="text-2xl md:text-3xl font-serif tracking-[0.2em] text-ivory group-hover:text-gold transition-colors duration-300">
-                        A U R A
+                <Link href="/" className="group flex flex-col items-center justify-center">
+                    <h1 className="text-3xl md:text-5xl font-serif tracking-[0.2em] text-ivory group-hover:text-gold transition-colors duration-300">
+                        S L B A
                     </h1>
+                    <span className="text-[10px] uppercase tracking-widest text-ivory/60 group-hover:text-gold/80 transition-colors duration-300 mt-1">
+                        Saroj Luxe Beauty Atelier
+                    </span>
                 </Link>
 
                 {/* Desktop Navigation */}

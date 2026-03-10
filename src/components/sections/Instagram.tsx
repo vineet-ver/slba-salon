@@ -2,11 +2,11 @@ import { Instagram as IgIcon } from "lucide-react";
 
 // Placeholder for Instagram grid
 const igPosts = [
-    "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=600&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=600&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=600&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1620052733979-5e26cb3b94fc?q=80&w=600&auto=format&fit=crop",
+    "/pretty-brides.jfif",
+    "/sweety.png",
+    "/farshi.jfif",
+    "/bridal2.jfif",
+    "/Ethereal-Glow.jfif",
 ];
 
 export default function Instagram() {
@@ -22,11 +22,11 @@ export default function Instagram() {
             <div className="container mx-auto px-6 md:px-12 relative z-10 mb-16">
                 <div className="flex flex-col md:flex-row justify-between items-end gap-8">
                     <div>
-                        <h2 className="text-gold uppercase tracking-[0.3em] text-[10px] font-semibold mb-4 flex items-center gap-2">
-                            <IgIcon size={14} /> @AuraBridal Official
+                        <h2 className="text-3xl font-serif mb-4 flex items-center justify-center gap-2">
+                            <IgIcon size={24} /> @SLBA_Official
                         </h2>
-                        <h3 className="text-4xl md:text-6xl font-serif text-ivory leading-tight">
-                            The <span className="italic text-gold">Aura</span> List
+                        <h3 className="text-[10px] md:text-xs uppercase tracking-[0.3em] text-ivory/60 font-medium">
+                            The <span className="italic text-gold">SLBA</span> List
                         </h3>
                     </div>
                     <a href="#" className="flex items-center text-xs uppercase tracking-[0.2em] text-ivory hover:text-gold transition-colors duration-300 group">

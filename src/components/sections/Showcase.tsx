@@ -10,9 +10,9 @@ if (typeof window !== "undefined") {
 }
 
 const portfolioImages = [
-    { src: "https://images.unsplash.com/photo-1546804784-816ea73ec1fa?q=80&w=2000&auto=format&fit=crop", title: "Ethereal Glow" },
-    { src: "https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?q=80&w=2000&auto=format&fit=crop", title: "Modern Muse" },
-    { src: "https://images.unsplash.com/photo-1516975080661-464971c50bf3?q=80&w=2000&auto=format&fit=crop", title: "Royal Radiance" },
+    { src: "/Ethereal-Glow.jfif", title: "Ethereal Glow" },
+    { src: "/Modern-Muse.jfif", title: "Modern Muse" },
+    { src: "/Royal-Radiance.jfif", title: "Royal Radiance" },
 ];
 
 export default function Showcase() {

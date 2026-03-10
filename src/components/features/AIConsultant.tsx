@@ -11,13 +11,13 @@ type Message = {
 };
 
 const predefinedResponses: Record<string, string> = {
-    "bridal": "Our Signature Bridal package starts at ₹25,000. It includes HD/Airbrush makeup, luxury hair styling, and on-location assistance. Would you like to check our artists' availability?",
-    "skin": "For a flawless glow, we recommend our 24K Gold Therapy or the Glass Skin Hydrafacial (Starting at ₹12,000). To give you the best advice, what is your primary skin concern?",
-    "hair": "Our hair studio specializes in Balayage, intricate updos, and restorative Caviar Hair Spas. Cut and styling begin at ₹5,000. Shall we book a consultation?",
-    "price": "Our luxury services range from ₹5,000 for advanced hair styling to custom packages starting at ₹25,000 for bridal. Let me know which service you are interested in for exact details.",
-    "book": "Excellent. I can guide you through our smart booking system. Are you looking to book a bridal consultation, or a specific studio service?",
-    "location": "Aura Bridal Studio is located in the heart of the luxury district. We also offer destination wedding services globally upon request.",
-    "default": "I understand. To provide you with the most curated experience, could you tell me a little more about the occasion and your personal style preferences?"
+    "bridal": "Our expert bridal and reception makeup services by Saroj Sharma ensure you look flawless. We also provide Mehndi services. Would you like to consult with us?",
+    "skin": "We provide Waxing, Threading, and dedicated Skin Clinic services to give you that radiant glow. What specific skin service are you looking for?",
+    "hair": "Our hair services include expert U cutting, V cutting, and custom styling. Shall we book a consultation?",
+    "price": "Please provide more details on the service you're interested in, and we'll connect you directly with Saroj for a custom quote.",
+    "book": "Excellent. You can use our smart booking system or contact us directly on WhatsApp at +91 70115 59575. We also provide home services across Delhi NCR.",
+    "location": "SLBA is located in Najafgarh, Dwarka, Noida, South West Delhi. We also provide convenient Home Services for our clients.",
+    "default": "Welcome to SLBA. How can we curate your beauty experience today?"
 };
 
 const quickSuggestions = [
@@ -30,7 +30,7 @@ const quickSuggestions = [
 export default function AIConsultant() {
     const [isOpen, setIsOpen] = useState(false);
     const [messages, setMessages] = useState<Message[]>([
-        { id: 1, text: "Welcome to Aura Bridal Studio. How can I assist you with your luxury beauty experience today?", sender: "ai" }
+        { id: 1, text: "Welcome to SLBA - Saroj Luxe Beauty Atelier. How can I assist you with your luxury beauty experience today?", sender: "ai" }
     ]);
     const [inputValue, setInputValue] = useState("");
     const [isTyping, setIsTyping] = useState(false);
@@ -98,7 +98,7 @@ export default function AIConsultant() {
                                     <Sparkles size={18} />
                                 </div>
                                 <div>
-                                    <h4 className="font-serif text-gold text-base tracking-wide">Aura Intelligence</h4>
+                                    <h4 className="font-serif text-gold text-base tracking-wide">SLBA Intelligence</h4>
                                     <p className="text-[9px] text-ivory/60 uppercase tracking-widest flex items-center gap-1">
                                         <span className="w-1.5 h-1.5 rounded-full bg-green-500 inline-block animate-pulse"></span> Online
                                     </p>

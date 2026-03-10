@@ -9,6 +9,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import AIConsultant from "@/components/features/AIConsultant";
 import FloatingMobileBooking from "@/components/ui/FloatingMobileBooking";
+import FloatingWhatsApp from "@/components/ui/FloatingWhatsApp";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -25,8 +26,8 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "AURA | Luxury Bridal Makeup Studio",
-  description: "Experience global luxury bridal makeup and styling. A ₹5,00,000+ premium digital experience for a celebrity-level studio.",
+  title: "SLBA | Saroj Luxe Beauty Atelier",
+  description: "Experience global luxury bridal makeup and styling with Saroj Sharma at SLBA - Saroj Luxe Beauty Atelier.",
 };
 
 export default function RootLayout({
@@ -46,6 +47,7 @@ export default function RootLayout({
             <Footer />
             <FloatingMobileBooking />
             <AIConsultant />
+            <FloatingWhatsApp />
           </CustomCursor>
         </SmoothScroll>
       </body>

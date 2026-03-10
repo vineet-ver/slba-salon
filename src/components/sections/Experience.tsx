@@ -34,9 +34,9 @@ const AnimatedCounter = ({ from, to, duration, suffix = "" }: { from: number, to
 
 export default function Experience() {
     const stats = [
-        { value: 10, suffix: "+", label: "Years of Master Artistry" },
-        { value: 5000, suffix: "+", label: "Happy Clients" },
-        { value: 3000, suffix: "+", label: "Bridal Transformations" },
+        { value: 5, suffix: "+", label: "Years of Master Artistry" },
+        { value: 2000, suffix: "+", label: "Happy Clients" },
+        { value: 1000, suffix: "+", label: "Bridal Transformations" },
         { value: 100, suffix: "%", label: "Satisfaction Guarantee" },
     ];
 
@@ -59,7 +59,7 @@ export default function Experience() {
                             Our flagship studio represents the pinnacle of bridal styling. We utilize only the world’s most exclusive cosmetics—Tom Ford, Charlotte Tilbury, Dior, and Chanel—to ensure a radiant, long-lasting finish that completely redefines luxury.
                         </p>
                         <img
-                            src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000&auto=format&fit=crop"
+                            src="/Modern-Muse.jfif"
                             alt="Luxury Cosmetics"
                             className="w-full h-48 object-cover grayscale opacity-80"
                         />

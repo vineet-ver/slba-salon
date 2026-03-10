@@ -134,9 +134,9 @@ export default function BookingSection() {
                                     className="grid grid-cols-1 md:grid-cols-3 gap-6"
                                 >
                                     {[
-                                        { name: "Elena Rostova", role: "Lead Director", img: "https://images.unsplash.com/photo-1595476108010-b4d1f10d5e42?q=80&w=200&auto=format&fit=crop" },
+                                        { name: "Saroj Sharma", role: "Lead Director", img: "https://images.unsplash.com/photo-1595476108010-b4d1f10d5e42?q=80&w=200&auto=format&fit=crop" },
                                         { name: "Marcus Sterling", role: "Senior Stylist", img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=200&auto=format&fit=crop" },
-                                        { name: "Any Stylist", role: "Aura Team", img: "" }
+                                        { name: "Any Stylist", role: "SLBA Team", img: "" }
                                     ].map((stylist, i) => (
                                         <button
                                             key={i}
