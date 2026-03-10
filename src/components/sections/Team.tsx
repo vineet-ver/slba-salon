@@ -20,10 +20,10 @@ const teamMembers = [
         instagram: "#"
     },
     {
-        name: "Isabella Chen",
+        name: "Saroj sharma",
         role: "Dermatology Aesthetics",
         exp: "9+ Years",
-        image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000&auto=format&fit=crop",
+        image: "sweety2.jpg",
         instagram: "#"
     }
 ];
